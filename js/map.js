@@ -115,7 +115,7 @@
         getCode() {
           return new Promise((resolve, reject) => {
             $.ajax({
-              url: 'https://geo.datav.aliyun.com/areas_v2/bound/all.json',
+              url: location && location.origin ? location.origin + '/js/all.json' : 'https://geo.datav.aliyun.com/areas_v2/bound/all.json',
               success(data) {
                 options.allCode = data;
                 resolve(data)
@@ -397,9 +397,9 @@
               code = item.adcode;
             }
           })
-          let url = `https://geo.datav.aliyun.com/areas_v2/bound/${code}_full.json`;
+          let url = location && location.origin ? `${location.origin}/js/map/${code}_full.json` : `https://geo.datav.aliyun.com/areas_v2/bound/${code}_full.json`;
           if (type) {
-            url = `https://geo.datav.aliyun.com/areas_v2/bound/${code}.json`;
+            url = location && location.origin ? `${location.origin}/js/map/${code}.json` : `https://geo.datav.aliyun.com/areas_v2/bound/${code}.json`;
           }
           return new Promise((resolve, reject) => {
             $.ajax({
