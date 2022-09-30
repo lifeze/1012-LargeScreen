@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在线服务大屏数据看板</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="js/jquery-3.6.1.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script> -->
+  <script type="text/javascript" src="js/echarts.js"></script>
+  <!-- <script type="text/javascript" src="js/echarts.min.js"></script> -->
+  <script type="text/javascript" src="js/map.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+  <!-- 头部 -->
+  <header class="f-color">在线服务大屏数据看板</header>
+  <!-- 主内容 -->
+  <div class="content d-flex p-2 pt-0">
+    <!-- 左侧数据 -->
+    <div class="w-4 h-full" style="display: inline">
+      <!-- 服务汇总 -->
+      <div class="h-40 w-full">
+        <div class="h-full w-full hidden">
+          <div class="m-2 mr-0 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
+            <div class="card_title f-color card-bgColor">服务汇总</div>
+            <div class="card_content">
+              <!-- 统计 -->
+              <div class="d-flex">
+                <div class="w-2">
+                  <div class="text-center f-green" style="font-size: 2.5rem;">585</div>
+                  <div class="text-center f-white" style="font-size: 1rem;">企业总数</div>
+                </div>
+                <div class="w-2 text-center">
+                  <div class="text-center f-yellow" style="font-size: 2.5rem;">404</div>
+                  <div class="text-center f-white" style="font-size: 1rem;">人才总数</div>
+                </div>
+              </div>
+              <!-- 图表 -->
+              <div id="leftTop" class="w-full" style="height: calc(100% - 4.5rem);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 服务类别订购情况 -->
+      <div class="h-60 w-full">
+        <div class="h-full w-full hidden">
+          <div class="m-2 mr-0 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
+            <div class="card_title f-color card-bgColor">服务类别订购情况</div>
+            <!-- 数据百分比 -->
+            <div id="leftBottom" class="w-full card_content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 地图 -->
+    <div class="w-2 h-full">
+      <div class="h-full w-full hidden">
+        <div class="m-2 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
+          <div class="card_title f-color card-bgColor">区域分布情况</div>
+          <!-- 地图 -->
+          <div class="address">
+          </div>
+          <div id="mainMap" class="w-full card_content"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 右侧数据 -->
+    <div class="w-4 h-full">
+      <!-- 统计 -->
+      <div class="h-40 w-full">
+        <div class="h-full w-full hidden">
+          <div class="m-2 ml-0 border mb-0 card-bgColor hidden" style="height: calc(100% - 20px - 2px);">
+            <div class="d-flex w-full h-full flex-column just-around">
+              <!-- 统计 -->
+              <div class="d-flex w-full">
+                <div class="w-2">
+                  <div class="text-center f-green" style="font-size: 2.5rem;">9585</div>
+                  <div class="text-center f-white" style="font-size: 1rem;">金额</div>
+                </div>
+                <div class="w-2 text-center">
+                  <div class="text-center f-yellow" style="font-size: 2.5rem;">100</div>
+                  <div class="text-center f-white" style="font-size: 1rem;">服务人数</div>
+                </div>
+              </div>
+              <div class="d-flex w-full">
+                <div class="w-2">
+                  <div class="text-center f-white" style="font-size: 1rem;">男</div>
+                  <div class="mt-2 ml-2" style="background-color: #01F7FA; height: 3rem; width: calc(100%-20px)"></div>
+                </div>
+                <div class="w-2">
+                  <div class="text-center f-white" style="font-size: 1rem;">女</div>
+                  <div class="mt-2 mr-2" style="background-color: #E1CA98; height: 3rem; width: calc(100%-20px)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 实施订购 -->
+      <div class="h-60 w-full">
+        <div class="h-full w-full hidden">
+          <div class="m-2 ml-0 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
+            <div class="card_title f-color card-bgColor">实施订购</div>
+            <div id="rightBottom" class="w-full card_content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
