@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>求职数据大屏看板</title>
+  <title>基层服务站大屏看板</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/jquery-3.6.1.js"></script>
   <!-- <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script> -->
   <script type="text/javascript" src="js/echarts.js"></script>
   <!-- <script type="text/javascript" src="js/echarts.min.js"></script> -->
-  <script type="text/javascript" src="js/map.js"></script>
-  <script type="text/javascript" src="js/jobWanted.js"></script>
+  <script type="text/javascript" src="js/service.js"></script>
 </head>
 <body>
   <!-- 头部 -->
-  <header class="f-color">求职数据大屏看板</header>
+  <header class="f-color">基层服务站大屏看板</header>
   <!-- 主内容 -->
   <div class="content d-flex p-2 pt-0">
     <!-- 左侧数据 -->
@@ -28,30 +27,22 @@
             <!-- 图表 -->
             <div class="d-flex w-full">
               <div class="w-2">
-                <div class="text-center f-green" style="font-size: 2.5rem;">585</div>
-                <div class="text-center f-white" style="font-size: 1rem;">企业总数</div>
+                <div class="text-center f-green" style="font-size: 2.5rem;">404</div>
+                <div class="text-center f-white" style="font-size: 1rem;">基层服务站总数</div>
               </div>
               <div class="w-2 text-center">
-                <div class="text-center f-yellow" style="font-size: 2.5rem;">404</div>
-                <div class="text-center f-white" style="font-size: 1rem;">人才总数</div>
+                <div class="text-center f-yellow" style="font-size: 2.5rem;">1092</div>
+                <div class="text-center f-white" style="font-size: 1rem;">服务人数</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="h-20 w-full">
-        <div class="h-full w-full hidden">
-          <div class="m-2 mr-0 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
-            <!-- 图表 -->
-            <div id="leftTop" class="w-full h-full"></div>
-          </div>
-        </div>
-      </div>
       <!-- 服务类别订购情况 -->
-      <div class="h-60 w-full">
+      <div class="h-80 w-full">
         <div class="h-full w-full hidden">
           <div class="m-2 mr-0 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
-            <div class="card_title f-color card-bgColor">岗位职位类别分布情况</div>
+            <div class="card_title f-color card-bgColor">实时活动数据</div>
             <!-- 图表 -->
             <div id="leftBottom" class="w-full card_content"></div>
           </div>
@@ -62,7 +53,7 @@
     <div class="w-2 h-full">
       <div class="h-full w-full hidden">
         <div class="m-2 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
-          <div class="card_title f-color card-bgColor">职位地区分布情况</div>
+          <div class="card_title f-color card-bgColor">基层服务站</div>
           <!-- 地图 -->
           <div class="address">
           </div>
@@ -79,43 +70,21 @@
             <div class="d-flex w-full">
               <div class="w-2">
                 <div class="text-center f-green" style="font-size: 2.5rem;">9585</div>
-                <div class="text-center f-white" style="font-size: 1rem;">金额</div>
+                <div class="text-center f-white" style="font-size: 1rem;">活动发布数</div>
               </div>
               <div class="w-2 text-center">
-                <div class="text-center f-yellow" style="font-size: 2.5rem;">100</div>
-                <div class="text-center f-white" style="font-size: 1rem;">服务人数</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="h-20 w-full">
-        <div class="h-full w-full hidden">
-          <div class="m-2 ml-0 border mb-0 card-bgColor hidden" style="height: calc(100% - 20px - 2px);">
-            <div class="d-flex w-full h-full flex-column just-around">
-              <!-- 统计 -->
-              <div class="d-flex w-full just-center">
-                <div class="f-white">性别分布</div>
-              </div>
-              <div class="d-flex w-full mb-2">
-                <div class="w-2">
-                  <div class="text-center f-white" style="font-size: 1rem;">男</div>
-                  <div class="mt-2 ml-2" style="background-color: #01F7FA; height: 2rem; width: calc(100%-20px)"></div>
-                </div>
-                <div class="w-2">
-                  <div class="text-center f-white" style="font-size: 1rem;">女</div>
-                  <div class="mt-2 mr-2" style="background-color: #E1CA98; height: 2rem; width: calc(100%-20px)"></div>
-                </div>
+                <div class="text-center f-yellow" style="font-size: 2.5rem;">9892</div>
+                <div class="text-center f-white" style="font-size: 1rem;">报名人数</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- 实施订购 -->
-      <div class="h-60 w-full">
+      <div class="h-80 w-full">
         <div class="h-full w-full hidden">
           <div class="m-2 ml-0 border mb-0 card-bgColor" style="height: calc(100% - 20px - 2px);">
-            <div class="card_title f-color card-bgColor">岗位薪资分布情况</div>
+            <div class="card_title f-color card-bgColor">实时报名</div>
             <!-- 图表 -->
             <div id="rightBottom" class="w-full card_content"></div>
           </div>
