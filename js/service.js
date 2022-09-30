@@ -5,7 +5,7 @@ $(document).ready(function() {
     var option = {
       tooltip: {
         trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)'
+        formatter: ' {b}: {c} ({d}%)'
       },
       series: [
         {
@@ -16,7 +16,7 @@ $(document).ready(function() {
             length: 30
           },
           label: {
-            formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+            formatter: ' {b|{b}：}{c}  {per|{d}%}  ',
             backgroundColor: '#F6F8FC',
             borderColor: '#8C8D8E',
             borderWidth: 1,
@@ -48,14 +48,16 @@ $(document).ready(function() {
             }
           },
           data: [
-            { value: 1048, name: 'Baidu' },
-            { value: 335, name: 'Direct' },
-            { value: 310, name: 'Email' },
-            { value: 251, name: 'Google' },
-            { value: 234, name: 'Union Ads' },
-            { value: 147, name: 'Bing' },
-            { value: 135, name: 'Video Ads' },
-            { value: 102, name: 'Others' }
+            { value: 1048, name: '平湖' },
+            { value: 335, name: '坂田' },
+            { value: 310, name: '坪地' },
+            { value: 251, name: '布吉' },
+            { value: 234, name: '坪山' },
+            { value: 147, name: '横岗' },
+            { value: 135, name: '葵涌' },
+            { value: 102, name: '大鹏' },
+            { value: 102, name: '南澳' },
+            { value: 102, name: '坑梓' },
           ]
         }
       ]
